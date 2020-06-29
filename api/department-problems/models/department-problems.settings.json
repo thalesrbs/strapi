@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "department_problems",
+  "info": {
+    "name": "DepartmentProblems"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "department": {
+      "model": "department"
+    },
+    "problem": {
+      "model": "problem"
+    }
+  }
+}

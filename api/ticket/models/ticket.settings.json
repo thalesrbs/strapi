@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tickets",
+  "info": {
+    "name": "Ticket"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "solution": {
+      "type": "text"
+    },
+    "closedAt": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "opened",
+        "closed"
+      ]
+    },
+    "openingUser": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "closingUser": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "assignedUser": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "problem": {
+      "model": "problem"
+    },
+    "department": {
+      "model": "department"
+    },
+    "ticket_messages": {
+      "collection": "ticket-message",
+      "via": "ticket"
+    }
+  }
+}

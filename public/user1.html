@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+</head>
+<body>
+  <script>
+    let socket = io.connect('http://localhost:1337');
+
+    socket.on('connect', () => {
+      socket.emit('signid', 1);
+    });
+
+    socket.on('updated:ticket', (res) => console.log(`Updated:ticket: ${res}`));
+
+    socket.on('created:ticket', (res) => console.log(`Created:ticket: ${res}`));
+
+    socket.on('created:ticket-message', (res) => console.log(`Created:ticket-message: ${res}`));
+
+    socket.on('loggedin', (res) => console.log(res));
+  </script>
+</body>
+</html>

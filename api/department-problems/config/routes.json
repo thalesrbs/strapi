@@ -1,0 +1,61 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/department-problems",
+      "handler": "department-problems.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/department-problems/count",
+      "handler": "department-problems.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/department-problems/:id",
+      "handler": "department-problems.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/department-problems",
+      "handler": "department-problems.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/department-problems/:id",
+      "handler": "department-problems.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/department-problems/:id",
+      "handler": "department-problems.delete",
+      "config": {
+        "policies": []
+      }
+    }
+    ,
+    {
+      "method": "GET",
+      "path": "/department-problems/problems-by-department/:departmentId",
+      "handler": "department-problems.findProblemsByDepartment",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

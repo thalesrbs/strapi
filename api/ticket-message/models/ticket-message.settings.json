@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ticket_messages",
+  "info": {
+    "name": "TicketMessage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "ticket": {
+      "via": "ticket_messages",
+      "model": "ticket"
+    },
+    "sender": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "text": {
+      "type": "text"
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

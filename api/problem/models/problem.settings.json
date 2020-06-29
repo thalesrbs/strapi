@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "problems",
+  "info": {
+    "name": "Problem"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ticket_message_reads",
+  "info": {
+    "name": "TicketMessageRead"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "userRead": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "ticketMessage": {
+      "model": "ticket-message"
+    }
+  }
+}
